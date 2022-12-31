@@ -13,7 +13,7 @@ fn main() {
         let line = line.expect("cannot load line").chars().collect::<Vec<char>>();
         // let rux_1 = &line[..((line.len()+1)/2)];
         // let rux_2 = &line[((line.len()+1)/2)..];
-        let rux_1:HashSet<&char> = line[..((line.len()+1)/2)].into_iter().collect();
+        let rux_1: HashSet<&char> = line[..((line.len()+1)/2)].into_iter().collect();
         let rux_2: HashSet<&char> = line[((line.len()+1)/2)..].into_iter().collect();
         let intersect = rux_1.intersection(&rux_2).clone();
         let foo: char = **intersect.into_iter().next().unwrap();
